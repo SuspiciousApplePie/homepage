@@ -1,12 +1,13 @@
 :root {
-  --padding-sm: 8px;
+  --padding-sm: 0.5rem;
   --padding-md: calc(var(--padding-sm) * 2);
   --padding-lg: calc(var(--padding-sm) * 3);
   --padding-xl: calc(var(--padding-sm) * 4);
-  --margin-sm: 8px;
+  --margin-sm: 0.5rem;
   --margin-md: calc(var(--margin-sm) * 2);
   --margin-lg: calc(var(--margin-sm) * 3);
   --main-color: #9966cc;
+  --font-sm: 1rem;
   --font-md: 2rem;
   --font-lg: 3rem;
 }
@@ -258,3 +259,23 @@ footer .image-section img {
 }
 
 @media (min-width: 1024px) {
+  header .profile img {
+    aspect-ratio: 9 / 12;
+  }
+
+  footer .image-section img {
+    aspect-ratio: 9 / 6;
+  }
+}
+
+@media (min-width: 1468px) {
+  header .profile img {
+    aspect-ratio: 9 / 16;
+  }
+  :root {
+    font-size: 24px;
+  }
+  footer .image-section img {
+    aspect-ratio: 9 / 4;
+  }
+}
