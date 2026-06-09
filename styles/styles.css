@@ -7,6 +7,8 @@
   --margin-md: calc(var(--margin-sm) * 2);
   --margin-lg: calc(var(--margin-sm) * 3);
   --main-color: #9966cc;
+  --bg-color: #333;
+  --font-color: #f1f2f3;
   --font-sm: 1rem;
   --font-md: 2rem;
   --font-lg: 3rem;
@@ -21,9 +23,10 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Stack Sans Notch", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: var(--main-color);
 }
 
 header .profile {
@@ -36,6 +39,7 @@ header .profile img {
   height: 100%;
   width: 100%;
   aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
 }
 
 header .name {
@@ -45,12 +49,12 @@ header .name {
   transform: translateY(-30px);
 }
 header {
-  background-color: #9966cc;
+  background: linear-gradient(var(--main-color), var(--bg-color));
   padding: var(--padding-md);
+  color: var(--font-color);
 }
 
 header .container .about {
-  background-color: yellow;
   padding: var(--padding-sm);
 }
 
@@ -62,10 +66,12 @@ header .about-header {
 header .links {
   display: flex;
   justify-content: center;
+  padding: var(--padding-sm);
   gap: var(--padding-md);
 }
 header .container .about .description {
-  line-height: 1.5;
+  font-size: var(--font-sm);
+  line-height: 1.7;
 }
 
 svg {
@@ -110,10 +116,17 @@ main .projects .project {
     "image image image"
     "title github live-link"
     "desc desc desc";
-  background-color: white;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 0.5rem;
+}
+
+main {
+  color: var(--font-color);
 }
 
 main .project img {
+  border-radius: 0.5rem;
   grid-area: image;
   width: 100%;
   height: 100%;
@@ -154,7 +167,16 @@ main .project svg {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: greenyellow;
+  background: linear-gradient(75deg, var(--bg-color), var(--main-color));
+  color: var(--font-color);
+}
+
+footer a {
+  color: var(--font-color);
+}
+
+footer a:visited {
+  color: var(--main-color);
 }
 footer .info {
   padding: var(--padding-md);
@@ -203,6 +225,7 @@ footer .image-section img {
   width: 100%;
   height: auto;
   aspect-ratio: 9 / 5;
+  border-radius: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -212,6 +235,7 @@ footer .image-section img {
   header {
     display: flex;
     justify-content: center;
+    background: linear-gradient(var(--bg-color), var(--main-color));
   }
   header .container .name {
     font-size: var(--font-md);
@@ -230,13 +254,15 @@ footer .image-section img {
   }
 
   header .profile img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3.3 / 3;
   }
 
   header .about {
     margin-left: var(--margin-md);
     max-width: 800px;
     margin-bottom: var(--margin-md);
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
   }
 
   header .about-header {
@@ -245,6 +271,14 @@ footer .image-section img {
 
   header .links {
     justify-content: flex-end;
+  }
+
+  .main {
+    background-image: url(../img/cities.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: var(--main-color);
+    background-size: 100% 300px;
   }
 
   footer {
@@ -288,7 +322,7 @@ footer .image-section img {
 
 @media (min-width: 1468px) {
   header .profile img {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 14;
   }
   :root {
     font-size: 24px;
