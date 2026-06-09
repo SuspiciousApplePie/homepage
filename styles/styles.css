@@ -263,8 +263,12 @@ footer .image-section img {
     aspect-ratio: 9 / 12;
   }
 
+  footer {
+    grid-template-columns: 1fr 2fr;
+  }
+
   footer .image-section img {
-    aspect-ratio: 9 / 6;
+    aspect-ratio: 9 / 4;
   }
 }
 
@@ -274,8 +278,5 @@ footer .image-section img {
   }
   :root {
     font-size: 24px;
-  }
-  footer .image-section img {
-    aspect-ratio: 9 / 4;
   }
 }
