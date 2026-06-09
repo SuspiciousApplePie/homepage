@@ -154,14 +154,17 @@ footer {
 footer .info {
   padding: var(--padding-md);
   display: grid;
+  grid-template-rows: repeat(4, min-content);
 }
 
 footer .info h2 {
   justify-self: center;
+  font-size: var(--font-md);
 }
 
 footer .info section {
   margin-top: var(--margin-sm);
+  font-size: var(--font-sm);
 }
 
 footer address {
@@ -169,6 +172,7 @@ footer address {
   flex-direction: column;
   margin-top: var(--margin-lg);
   gap: var(--padding-lg);
+  font-size: var(--font-sm);
 }
 
 footer address * {
@@ -183,3 +187,10 @@ footer .links {
   align-content: center;
   gap: var(--padding-sm);
 }
+
+footer .image-section img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 5;
+}
+
