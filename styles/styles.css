@@ -185,6 +185,12 @@ footer address * {
   flex-direction: column;
 }
 
+footer .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--padding-sm);
+}
 footer .links {
   margin-top: var(--margin-md);
   display: flex;
