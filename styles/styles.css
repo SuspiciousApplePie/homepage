@@ -93,6 +93,7 @@ a {
 
 main .project-header {
   justify-self: end;
+  font-size: var(--font-md);
 }
 
 main .projects {
@@ -120,6 +121,7 @@ main .project img {
 main .project h3 {
   grid-area: title;
   padding: var(--padding-sm);
+  font-size: var(--font-sm);
 }
 
 main .project a {
@@ -139,6 +141,7 @@ main .project a:last-of-type {
 main .project .project-description {
   grid-area: desc;
   padding: var(--padding-sm);
+  font-size: var(--font-sm);
 }
 
 main .project svg {
