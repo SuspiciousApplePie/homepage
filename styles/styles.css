@@ -194,3 +194,67 @@ footer .image-section img {
   aspect-ratio: 9 / 5;
 }
 
+@media (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  header .container .name {
+    font-size: var(--font-md);
+    display: inline-block;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-sm);
+  }
+
+  header .profile {
+    width: 300px;
+    float: left;
+    margin-right: var(--margin-md);
+    margin-bottom: var(--margin-sm);
+  }
+
+  header .profile img {
+    aspect-ratio: 1 / 1;
+  }
+
+  header .about {
+    margin-left: var(--margin-md);
+    max-width: 800px;
+    margin-bottom: var(--margin-md);
+  }
+
+  header .about-header {
+    margin-top: var(--margin-lg);
+  }
+
+  header .links {
+    justify-content: flex-end;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--padding-md) var(--padding-xl);
+  }
+
+  footer .image-section {
+    padding: var(--padding-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .image-section img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 9;
+  }
+}
+
+@media (min-width: 1024px) {
