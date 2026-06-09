@@ -22,60 +22,54 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-header {
-  display: grid;
-  background-color: var(--main-color);
-  grid-template-rows: 1fr repeat(3, min-content);
-  grid-template-areas: "profile";
-  padding: var(--padding-md);
-}
-
-header .profile-photo {
+header .profile {
   display: flex;
   justify-content: center;
-  align-items: center;
-  grid-area: profile;
-  padding: 0 var(--padding-sm);
 }
 
-.profile-photo img {
-  width: 100%;
+header .profile img {
   max-width: 300px;
-  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 header .name {
-  grid-area: profile;
-  align-self: end;
-  justify-self: center;
-  font-size: calc(var(--font-md) + 8px);
-  padding: 0 calc(var(--padding-sm) + 4px);
+  display: flex;
+  justify-content: center;
+  font-size: calc(var(--font-sm) * 1.5);
+  transform: translateY(-30px);
+}
+header {
+  background-color: #9966cc;
+  padding: var(--padding-md);
 }
 
-header .about-header {
-  margin-top: var(--margin-md);
-  align-self: center;
-  justify-self: center;
+header .container .about {
+  background-color: yellow;
   padding: var(--padding-sm);
 }
 
-header .description {
-  line-height: 1.5;
-  margin-bottom: var(--margin-sm);
-}
-
-.header .links {
+header .about-header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: var(--margin-sm);
+}
+
+header .links {
+  display: flex;
+  justify-content: center;
+  gap: var(--padding-md);
+}
+header .container .about .description {
+  line-height: 1.5;
 }
 
 svg {
-  height: 32px;
-  width: 32px;
+  height: 2rem;
+  width: 2rem;
   fill: var(--main-color);
 }
 
