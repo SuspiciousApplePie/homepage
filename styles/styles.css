@@ -94,6 +94,27 @@ a {
   height: min-content;
 }
 
+.links a,
+.project a {
+  transition:
+    transform 100ms ease-in,
+    filter 100ms ease-in;
+}
+.links a:hover,
+.project a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px var(--font-color));
+}
+
+path,
+g {
+  fill: var(--main-color);
+}
+
+.inner-linked-in {
+  fill: var(--font-color);
+}
+
 .wrapper {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -125,6 +146,15 @@ main .projects .project {
   background-color: var(--bg-color);
   color: var(--font-color);
   border-radius: 0.5rem;
+  transition:
+    box-shadow 300ms ease-in,
+    transform 200ms ease-in;
+  cursor: pointer;
+}
+
+main .project:hover {
+  box-shadow: 0 0 32px var(--font-color);
+  transform: translateY(-15px);
 }
 
 main {
