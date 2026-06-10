@@ -107,7 +107,7 @@ g {
   display: grid;
   grid-template-rows: auto 1fr;
   padding: var(--padding-xl);
-  width: clamp(250px, 100%, 1368px);
+  width: clamp(250px, 100%, 1024px);
   justify-self: center;
   gap: var(--padding-md);
 }
