@@ -190,16 +190,23 @@ main .project svg {
 
 footer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(75deg, var(--bg-color), var(--main-color));
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  max-width: 1024px;
+  width: 100%;
+}
+
+.footer-wrapper a {
   color: var(--font-color);
 }
 
-footer a {
-  color: var(--font-color);
-}
-
-footer a:visited {
+.footer-wrapper a:visited {
   color: var(--main-color);
 }
 footer .info {
@@ -208,17 +215,17 @@ footer .info {
   grid-template-rows: repeat(4, min-content);
 }
 
-footer .info h2 {
+.footer-wrapper .info h2 {
   justify-self: center;
   font-size: var(--font-md);
 }
 
-footer .info section {
+.footer-wrapper .info section {
   margin-top: var(--margin-sm);
   font-size: var(--font-sm);
 }
 
-footer address {
+.footer-wrapper address {
   display: flex;
   flex-direction: column;
   margin-top: var(--margin-lg);
@@ -226,18 +233,18 @@ footer address {
   font-size: var(--font-sm);
 }
 
-footer address * {
+.footer-wrapper address * {
   display: flex;
   flex-direction: column;
 }
 
-footer .link {
+.footer-wrapper .link {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--padding-sm);
 }
-footer .links {
+.footer-wrapper .links {
   margin-top: var(--margin-md);
   display: flex;
   justify-content: center;
@@ -245,7 +252,7 @@ footer .links {
   gap: var(--padding-sm);
 }
 
-footer .image-section img {
+.footer-wrapper .image-section img {
   width: 100%;
   height: auto;
   aspect-ratio: 9 / 5;
@@ -325,27 +332,24 @@ footer .image-section img {
     justify-content: flex-end;
   }
 
-  footer {
+  .footer-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: var(--padding-md) var(--padding-xl);
   }
 
-  footer .image-section {
+  .footer-wrapper .image-section {
     padding: var(--padding-md);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  footer .image-section img {
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 9 / 9;
+  .footer-wrapper .image-section img {
+    aspect-ratio: 10 / 9;
   }
 
-  footer .links {
+  .footer-wrapper .links {
     justify-self: self-start;
   }
 }
@@ -355,12 +359,12 @@ footer .image-section img {
     aspect-ratio: 9 / 12;
   }
 
-  footer {
+  .footer-wrapper {
     grid-template-columns: 1fr 2fr;
   }
 
-  footer .image-section img {
-    aspect-ratio: 9 / 4;
+  .footer-wrapper .image-section img {
+    aspect-ratio: 9 / 5;
   }
 }
 
