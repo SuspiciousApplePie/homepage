@@ -1,6 +1,6 @@
 # Homepage
 
-This is my personal homapage containing favorite apps I did.
+This is my personal homapage containing my recent projects.
 
 ## Screenshot
 
